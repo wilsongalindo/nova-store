@@ -173,12 +173,35 @@ npm test
 
 ## Known Limitations
 
-- **External product images** — All product photos are hosted on `images.unsplash.com`. Some URLs may return **404** if Unsplash removes or rotates assets. Broken images affect catalog cards and PDP galleries until URLs are updated or migrated to local files.
-- **Cart persistence** — Cart state lives in memory only; refreshing the browser clears the cart.
-- **Add to cart on catalog cards** — UI is present but not connected to the cart store from `ProductCard`.
-- **Checkout** — The checkout button in the cart sheet has no payment or order flow.
-- **Stock limits** — Cart does not enforce variant/product stock ceilings.
-- **Single locale** — Currency formatting is USD-only (`en-US`).
+### External Images
+
+Some products use externally hosted images from Unsplash.
+
+Because these assets depend on a third-party provider, some image URLs may become unavailable over time, resulting in missing product images in the catalog or product detail pages.
+
+For a production implementation, all product assets should be migrated to a dedicated CDN or local storage under the application's control.
+
+### Cart Persistence
+
+The shopping cart uses Zustand in-memory state only.
+
+Refreshing the browser clears the cart contents. A production-ready version should persist cart state using localStorage, cookies, or a backend session.
+
+### Checkout Flow
+
+The checkout button is implemented as a UI placeholder only.
+
+No payment processing, order creation, or checkout workflow is currently implemented.
+
+### Inventory Validation
+
+Cart quantities are not validated against available inventory levels.
+
+A production implementation should prevent quantities from exceeding stock availability.
+
+### Localization
+
+Currency formatting is currently fixed to USD (`en-US`) and does not support multiple locales or currencies.
 
 ---
 
