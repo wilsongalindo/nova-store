@@ -55,10 +55,12 @@ export function CartSheet({ open, onOpenChange }: CartSheetProps) {
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent
         side="right"
-        className={cn("flex w-full flex-col gap-0 p-0 sm:max-w-md")}
+        className={cn(
+          "flex h-full w-full max-w-full flex-col gap-0 p-0 sm:max-w-md",
+        )}
         aria-describedby="cart-sheet-description"
       >
-        <SheetHeader className="border-b px-4 py-4 text-left">
+        <SheetHeader className="border-b px-4 py-4 pr-14 text-left">
           <SheetTitle>Cart</SheetTitle>
           <SheetDescription id="cart-sheet-description">
             {isEmpty
@@ -84,7 +86,7 @@ export function CartSheet({ open, onOpenChange }: CartSheetProps) {
           )}
         </div>
 
-        <SheetFooter className="border-t px-4 py-4">
+        <SheetFooter className="shrink-0 border-t bg-background px-4 py-4">
           <CartSummary />
         </SheetFooter>
       </SheetContent>

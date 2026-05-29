@@ -44,7 +44,7 @@ export function CartSummary({ className, onCheckout }: CartSummaryProps) {
       <Button
         type="button"
         size="lg"
-        className="w-full"
+        className="min-h-11 w-full"
         disabled={isEmpty}
         aria-label={
           isEmpty

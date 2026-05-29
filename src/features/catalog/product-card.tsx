@@ -66,7 +66,7 @@ function ProductRating({ rating, reviewCount }: ProductRatingProps) {
 
   return (
     <div
-      className="flex items-center gap-2"
+      className="flex min-w-0 flex-wrap items-center gap-2"
       role="img"
       aria-label={`${rating} out of 5 stars, ${reviewCount.toLocaleString()} reviews`}
     >
@@ -121,7 +121,7 @@ export function ProductCard({
   return (
     <Card
       className={cn(
-        "group h-full gap-0 py-0 transition-shadow hover:shadow-md focus-within:shadow-md",
+        "group h-full min-w-0 gap-0 py-0 transition-shadow hover:shadow-md focus-within:shadow-md",
         className,
       )}
     >
@@ -195,13 +195,13 @@ export function ProductCard({
         </div>
       </CardContent>
 
-      <CardFooter className="grid grid-cols-1 gap-2 border-t px-4 py-4 sm:grid-cols-2">
-        <Button variant="outline" asChild className="w-full">
+      <CardFooter className="grid grid-cols-1 gap-2 border-t px-4 py-4 md:grid-cols-2">
+        <Button variant="outline" asChild className="min-h-11 w-full">
           <Link href={`/products/${product.slug}`}>View Details</Link>
         </Button>
         <Button
           type="button"
-          className="w-full"
+          className="min-h-11 w-full"
           disabled={isOutOfStock}
           aria-label={
             isOutOfStock

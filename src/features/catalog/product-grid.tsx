@@ -75,7 +75,7 @@ export function ProductGrid({
     <ul
       aria-label={`${products.length} products`}
       className={cn(
-        "grid w-full list-none grid-cols-1 gap-6 p-0 m-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+        "grid w-full min-w-0 list-none grid-cols-1 gap-6 p-0 m-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
         className,
       )}
     >

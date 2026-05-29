@@ -25,7 +25,7 @@ export function CartTrigger({ onClick, className }: CartTriggerProps) {
       type="button"
       variant="ghost"
       size="icon"
-      className={cn("relative", className)}
+      className={cn("relative size-11 shrink-0", className)}
       aria-label={
         itemCount > 0
           ? `Open cart, ${itemCount} item${itemCount === 1 ? "" : "s"}`

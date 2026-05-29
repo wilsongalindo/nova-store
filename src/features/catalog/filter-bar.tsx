@@ -91,7 +91,7 @@ export function FilterBar({
         className,
       )}
     >
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2 sm:gap-3">
         <h2 className="text-base font-semibold tracking-tight">Filters</h2>
         {activeFilterCount > 0 ? (
           <Button
@@ -99,17 +99,18 @@ export function FilterBar({
             variant="ghost"
             size="sm"
             onClick={onReset}
-            className="shrink-0 text-muted-foreground"
+            className="h-11 shrink-0 px-3 text-muted-foreground sm:h-7"
             aria-label={`Clear all filters (${activeFilterCount} active)`}
           >
             <RotateCcw aria-hidden="true" />
-            Clear filters ({activeFilterCount})
+            <span className="hidden sm:inline">Clear filters ({activeFilterCount})</span>
+            <span className="sm:hidden">Clear ({activeFilterCount})</span>
           </Button>
         ) : null}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <div className="space-y-2 md:col-span-2 xl:col-span-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="min-w-0 space-y-2 md:col-span-2 lg:col-span-4">
           <label htmlFor={searchId} className="text-sm font-medium">
             Search
           </label>
@@ -126,12 +127,12 @@ export function FilterBar({
               autoComplete="off"
               value={searchInput}
               onChange={(event) => setSearchInput(event.target.value)}
-              className="pl-9"
+              className="min-h-11 pl-9"
             />
           </div>
         </div>
 
-        <div className="space-y-2">
+        <div className="min-w-0 space-y-2">
           <label htmlFor={categoryId} className="text-sm font-medium">
             Category
           </label>
@@ -141,7 +142,7 @@ export function FilterBar({
               onFilterChange({ category: value === "all" ? null : value })
             }
           >
-            <SelectTrigger id={categoryId} className="w-full">
+            <SelectTrigger id={categoryId} className="min-h-11 w-full">
               <SelectValue placeholder="All categories" />
             </SelectTrigger>
             <SelectContent>
@@ -155,7 +156,7 @@ export function FilterBar({
           </Select>
         </div>
 
-        <div className="space-y-2">
+        <div className="min-w-0 space-y-2">
           <label htmlFor={inventoryId} className="text-sm font-medium">
             Inventory
           </label>
@@ -168,7 +169,7 @@ export function FilterBar({
               })
             }
           >
-            <SelectTrigger id={inventoryId} className="w-full">
+            <SelectTrigger id={inventoryId} className="min-h-11 w-full">
               <SelectValue placeholder="All statuses" />
             </SelectTrigger>
             <SelectContent>
@@ -182,7 +183,7 @@ export function FilterBar({
           </Select>
         </div>
 
-        <div className="space-y-2">
+        <div className="min-w-0 space-y-2">
           <label htmlFor={sortId} className="text-sm font-medium">
             Sort by
           </label>
@@ -192,7 +193,7 @@ export function FilterBar({
               onFilterChange({ sort: value as FilterState["sort"] })
             }
           >
-            <SelectTrigger id={sortId} className="w-full">
+            <SelectTrigger id={sortId} className="min-h-11 w-full">
               <SelectValue placeholder="Sort products" />
             </SelectTrigger>
             <SelectContent>
@@ -205,17 +206,18 @@ export function FilterBar({
           </Select>
         </div>
 
-        <div className="space-y-3 md:col-span-2 xl:col-span-4">
-          <div className="flex items-center justify-between gap-2">
+        <div className="min-w-0 space-y-3 md:col-span-2 lg:col-span-4">
+          <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
             <label htmlFor={priceId} className="text-sm font-medium">
               Price range
             </label>
-            <span className="text-sm text-muted-foreground tabular-nums">
+            <span className="shrink-0 text-xs text-muted-foreground tabular-nums sm:text-sm">
               {formatPriceLabel(filters.minPrice)} –{" "}
               {formatPriceLabel(filters.maxPrice)}
             </span>
           </div>
-          <Slider
+          <div className="px-1">
+            <Slider
             id={priceId}
             aria-label="Price range"
             min={priceBounds.min}
@@ -227,6 +229,7 @@ export function FilterBar({
             }
             disabled={priceBounds.min === priceBounds.max}
           />
+          </div>
         </div>
       </div>
     </section>

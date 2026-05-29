@@ -59,12 +59,12 @@ export function CartItemRow({ item, className }: CartItemRowProps) {
   return (
     <article
       className={cn(
-        "flex flex-col gap-4 rounded-xl border bg-card p-4 sm:flex-row sm:items-start",
+        "flex flex-row items-start gap-3 rounded-xl border bg-card p-3 sm:gap-4 sm:p-4",
         className,
       )}
       aria-label={`${productName}, quantity ${item.quantity}`}
     >
-      <div className="relative mx-auto size-24 shrink-0 overflow-hidden rounded-lg bg-muted sm:mx-0">
+      <div className="relative size-20 shrink-0 overflow-hidden rounded-lg bg-muted sm:size-24">
         {item.image ? (
           <Image
             src={item.image}
@@ -84,8 +84,10 @@ export function CartItemRow({ item, className }: CartItemRowProps) {
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col gap-3">
-        <div className="space-y-1">
-          <h3 className="font-medium leading-snug">{productName}</h3>
+        <div className="min-w-0 space-y-1">
+          <h3 className="line-clamp-2 font-medium leading-snug break-words">
+            {productName}
+          </h3>
           {variantLabel ? (
             <p className="text-sm text-muted-foreground">{variantLabel}</p>
           ) : null}
@@ -94,16 +96,17 @@ export function CartItemRow({ item, className }: CartItemRowProps) {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 self-start"
             role="group"
             aria-label={`Quantity controls for ${productName}`}
           >
             <Button
               type="button"
               variant="outline"
-              size="icon-sm"
+              size="icon"
+              className="size-11 shrink-0 sm:size-7"
               aria-label={
                 item.quantity === 1
                   ? `Remove ${productName} from cart`
@@ -119,7 +122,8 @@ export function CartItemRow({ item, className }: CartItemRowProps) {
             <Button
               type="button"
               variant="outline"
-              size="icon-sm"
+              size="icon"
+              className="size-11 shrink-0 sm:size-7"
               aria-label={`Increase quantity of ${productName}`}
               onClick={handleIncrement}
             >
@@ -127,7 +131,7 @@ export function CartItemRow({ item, className }: CartItemRowProps) {
             </Button>
           </div>
 
-          <div className="flex items-center justify-between gap-3 sm:justify-end">
+          <div className="flex w-full items-center justify-between gap-3 sm:w-auto sm:justify-end">
             <p className="text-sm font-semibold tabular-nums sm:text-base">
               <span className="sr-only">Line subtotal</span>
               {formatPrice(lineSubtotal)}
@@ -135,8 +139,8 @@ export function CartItemRow({ item, className }: CartItemRowProps) {
             <Button
               type="button"
               variant="ghost"
-              size="icon-sm"
-              className="text-destructive hover:bg-destructive/10 hover:text-destructive"
+              size="icon"
+              className="size-11 shrink-0 text-destructive hover:bg-destructive/10 hover:text-destructive sm:size-7"
               aria-label={`Remove ${productName} from cart`}
               onClick={handleRemove}
             >

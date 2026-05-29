@@ -122,11 +122,11 @@ export function ProductDetail({ product, className }: ProductDetailProps) {
   return (
     <article
       className={cn(
-        "mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8",
+        "mx-auto w-full min-w-0 max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8",
         className,
       )}
     >
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-12">
         <ProductGallery
           images={product.images}
           productName={product.name}
@@ -149,8 +149,8 @@ export function ProductDetail({ product, className }: ProductDetailProps) {
             </Badge>
           </div>
 
-          <header className="space-y-3">
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+          <header className="min-w-0 space-y-3">
+            <h1 className="text-2xl font-semibold tracking-tight break-words sm:text-3xl lg:text-4xl">
               {product.name}
             </h1>
             <ProductRating
@@ -159,7 +159,7 @@ export function ProductDetail({ product, className }: ProductDetailProps) {
             />
           </header>
 
-          <p className="text-3xl font-semibold tabular-nums tracking-tight">
+          <p className="text-2xl font-semibold tabular-nums tracking-tight sm:text-3xl">
             {formatPrice(displayPrice)}
           </p>
 
@@ -175,7 +175,7 @@ export function ProductDetail({ product, className }: ProductDetailProps) {
                   setSelectedVariant(variant ?? null);
                 }}
               >
-                <SelectTrigger id={variantSelectId} className="w-full sm:w-80">
+                <SelectTrigger id={variantSelectId} className="min-h-11 w-full lg:max-w-sm">
                   <SelectValue placeholder="Select a variant" />
                 </SelectTrigger>
                 <SelectContent>
@@ -207,7 +207,7 @@ export function ProductDetail({ product, className }: ProductDetailProps) {
             >
               Description
             </h2>
-            <p className="text-base leading-relaxed text-muted-foreground">
+            <p className="text-base leading-relaxed break-words text-muted-foreground">
               {product.description}
             </p>
           </section>
@@ -217,7 +217,7 @@ export function ProductDetail({ product, className }: ProductDetailProps) {
             variant={selectedVariant}
             price={displayPrice}
             disabled={isAddToCartDisabled}
-            className="w-full sm:w-auto"
+            className="min-h-11 w-full lg:w-auto"
           />
         </div>
       </div>
