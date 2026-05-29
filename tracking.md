@@ -4,7 +4,7 @@
 
 | Área             | Estado |
 | ---------------- | ------ |
-| Arquitectura     | ⬜      |
+| Arquitectura     | ✅      |
 | Tipos            | ✅      |
 | Dataset          | ✅      |
 | Catálogo         | ⬜      |
@@ -25,14 +25,14 @@
 
 | Requisito         | Estado |
 | ----------------- | ------ |
-| Imagen            | ⬜      |
-| Nombre            | ⬜      |
-| Precio            | ⬜      |
-| Categoría         | ⬜      |
-| Rating            | ⬜      |
-| Estado inventario | ⬜      |
-| Badge promoción   | ⬜      |
-| CTA               | ⬜      |
+| Imagen            | ✅      |
+| Nombre            | ✅      |
+| Precio            | ✅      |
+| Categoría         | ✅      |
+| Rating            | ✅      |
+| Estado inventario | ✅      |
+| Badge promoción   | ✅      |
+| CTA               | ✅      |
 
 ---
 
