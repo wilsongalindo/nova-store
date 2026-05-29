@@ -24,6 +24,7 @@
       "@/data/*": ["./src/data/*"],
       "@/lib/products": ["./src/lib/products.ts"],
       "@/lib/format-price": ["./src/lib/format-price.ts"],
+      "@/components/layout/header": ["./src/components/layout/header.tsx"],
       "@/features/*": ["./src/features/*", "./features/*"],
       "@/*": ["./*"]
     }
