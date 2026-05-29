@@ -4,20 +4,20 @@
 
 | Área             | Estado |
 | ---------------- | ------ |
-| Arquitectura     | ✅      |
-| Tipos            | ✅      |
-| Dataset          | ✅      |
-| Catálogo         | ⬜      |
-| Filtros          | ⬜      |
-| Detalle Producto | ⬜      |
-| Carrito          | ⬜      |
-| Responsive       | ⬜      |
-| UI/UX            | ⬜      |
-| Performance      | ⬜      |
-| Accesibilidad    | ⬜      |
-| Testing          | ⬜      |
-| Documentación    | ⬜      |
-| Deploy           | ⬜      |
+| Arquitectura     | ✅ |
+| Tipos            | ✅ |
+| Dataset          | ✅ |
+| Catálogo         | ✅ |
+| Filtros          | ✅ |
+| Detalle Producto | ✅ |
+| Carrito          | ✅ |
+| Responsive       | 🟨 |
+| UI/UX            | ✅ |
+| Performance      | 🟨 |
+| Accesibilidad    | ✅ |
+| Testing          | 🟨 |
+| Documentación    | 🟨 |
+| Deploy           | ⬜ |
 
 ---
 
@@ -25,14 +25,14 @@
 
 | Requisito         | Estado |
 | ----------------- | ------ |
-| Imagen            | ✅      |
-| Nombre            | ✅      |
-| Precio            | ✅      |
-| Categoría         | ✅      |
-| Rating            | ✅      |
-| Estado inventario | ✅      |
-| Badge promoción   | ✅      |
-| CTA               | ✅      |
+| Imagen            | ✅ |
+| Nombre            | ✅ |
+| Precio            | ✅ |
+| Categoría         | ✅ |
+| Rating            | ✅ |
+| Estado inventario | ✅ |
+| Badge promoción   | ✅ |
+| CTA               | ✅ |
 
 ---
 
@@ -40,11 +40,11 @@
 
 | Requisito         | Estado |
 | ----------------- | ------ |
-| Búsqueda texto    | ✅      |
-| Categoría         | ✅      |
-| Ordenamiento      | ✅      |
-| Rango precio      | ✅      |
-| Estado inventario | ✅      |
+| Búsqueda texto    | ✅ |
+| Categoría         | ✅ |
+| Ordenamiento      | ✅ |
+| Rango precio      | ✅ |
+| Estado inventario | ✅ |
 
 ---
 
@@ -52,13 +52,13 @@
 
 | Requisito              | Estado |
 | ---------------------- | ------ |
-| Galería imágenes       | ⬜      |
-| Información producto   | ⬜      |
-| Descripción            | ⬜      |
-| Variantes              | ⬜      |
-| Stock                  | ⬜      |
-| Rating                 | ⬜      |
-| Productos relacionados | ⬜      |
+| Galería imágenes       | ✅ |
+| Información producto   | ✅ |
+| Descripción            | ✅ |
+| Variantes              | ✅ |
+| Stock                  | ✅ |
+| Rating                 | ✅ |
+| Productos relacionados | ✅ |
 
 ---
 
@@ -66,10 +66,10 @@
 
 | Requisito          | Estado |
 | ------------------ | ------ |
-| Agregar productos  | ⬜      |
-| Eliminar productos | ⬜      |
-| Cambiar cantidades | ⬜      |
-| Resumen compra     | ⬜      |
+| Agregar productos  | ✅ |
+| Eliminar productos | ✅ |
+| Cambiar cantidades | ✅ |
+| Resumen compra     | ✅ |
 
 ---
 
@@ -77,9 +77,9 @@
 
 | Requisito | Estado |
 | --------- | ------ |
-| Mobile    | ⬜      |
-| Tablet    | ⬜      |
-| Desktop   | ⬜      |
+| Mobile    | 🟨 |
+| Tablet    | 🟨 |
+| Desktop   | ✅ |
 
 ---
 
@@ -87,14 +87,14 @@
 
 | Requisito          | Estado |
 | ------------------ | ------ |
-| Jerarquía visual   | ⬜      |
-| Consistencia       | ⬜      |
-| Espaciados         | ⬜      |
-| Microinteracciones | ⬜      |
-| Empty states       | ⬜      |
-| Loading states     | ⬜      |
-| Error states       | ⬜      |
-| Feedback visual    | ⬜      |
+| Jerarquía visual   | ✅ |
+| Consistencia       | ✅ |
+| Espaciados         | ✅ |
+| Microinteracciones | ✅ |
+| Empty states       | ✅ |
+| Loading states     | ⬜ |
+| Error states       | ✅ |
+| Feedback visual    | ✅ |
 
 ---
 
@@ -102,14 +102,14 @@
 
 | Requisito        | Estado |
 | ---------------- | ------ |
-| Clean Code       | ⬜      |
-| Componentización | ⬜      |
-| Tipado           | ⬜      |
-| Manejo estado    | ⬜      |
-| Manejo errores   | ⬜      |
-| Legibilidad      | ⬜      |
-| Escalabilidad    | ⬜      |
-| Mantenibilidad   | ⬜      |
+| Clean Code       | ✅ |
+| Componentización | ✅ |
+| Tipado           | ✅ |
+| Manejo estado    | ✅ |
+| Manejo errores   | ✅ |
+| Legibilidad      | ✅ |
+| Escalabilidad    | ✅ |
+| Mantenibilidad   | ✅ |
 
 ---
 
@@ -117,12 +117,12 @@
 
 | Requisito               | Estado |
 | ----------------------- | ------ |
-| Lazy Loading            | ⬜      |
-| Optimización imágenes   | ⬜      |
-| Code Splitting          | ⬜      |
-| Memoización             | ⬜      |
-| Renderizados eficientes | ⬜      |
-| Cache                   | ⬜      |
+| Lazy Loading            | ✅ |
+| Optimización imágenes   | 🟨 |
+| Code Splitting          | ✅ |
+| Memoización             | ⬜ |
+| Renderizados eficientes | ✅ |
+| Cache                   | ⬜ |
 
 ---
 
@@ -130,12 +130,12 @@
 
 | Requisito             | Estado |
 | --------------------- | ------ |
-| Navegación teclado    | ⬜      |
-| Focus states visibles | ⬜      |
-| HTML semántico        | ⬜      |
-| Labels correctos      | ⬜      |
-| Contraste adecuado    | ⬜      |
-| Roles ARIA            | ⬜      |
+| Navegación teclado    | ✅ |
+| Focus states visibles | ✅ |
+| HTML semántico        | ✅ |
+| Labels correctos      | ✅ |
+| Contraste adecuado    | 🟨 |
+| Roles ARIA            | ✅ |
 
 ---
 
@@ -143,9 +143,9 @@
 
 | Requisito   | Estado |
 | ----------- | ------ |
-| Unitarios   | ⬜      |
-| Integración | ⬜      |
-| E2E         | ⬜      |
+| Unitarios   | ✅ |
+| Integración | ⬜ |
+| E2E         | ⬜ |
 
 ---
 
@@ -153,9 +153,9 @@
 
 | Documento     | Estado |
 | ------------- | ------ |
-| README.md     | ⬜      |
-| decisiones.md | ⬜      |
-| ia.md         | ⬜      |
+| README.md     | 🟨 |
+| decisiones.md | 🟨 |
+| ia.md         | 🟨 |
 
 ---
 
@@ -163,13 +163,35 @@
 
 | Commit                  | Estado |
 | ----------------------- | ------ |
-| Inicialización proyecto | ✅      |
-| Arquitectura            | ⬜      |
-| Dataset                 | ⬜      |
-| Catálogo                | ⬜      |
-| Filtros                 | ⬜      |
-| Detalle                 | ⬜      |
-| Carrito                 | ⬜      |
-| Responsive              | ⬜      |
-| Testing                 | ⬜      |
-| Documentación           | ⬜      |
+| Inicialización proyecto | ✅ |
+| Arquitectura            | ✅ |
+| Dataset                 | ✅ |
+| Catálogo                | ✅ |
+| Filtros                 | ✅ |
+| Detalle                 | ✅ |
+| Carrito                 | ✅ |
+| Responsive              | 🟨 |
+| Testing                 | 🟨 |
+| Documentación           | 🟨 |
+
+---
+
+# Pendientes Antes de Entregar
+
+- Ejecutar npm run build final
+- Validar responsive Mobile
+- Validar responsive Tablet
+- Completar README.md
+- Generar decisiones.md
+- Generar ia.md
+- Desplegar en Vercel
+
+---
+
+# Limitaciones Conocidas
+
+- Parte del catálogo utiliza imágenes externas (Unsplash).
+- Algunas URLs de imágenes pueden dejar de estar disponibles con el tiempo.
+- No se implementó persistencia del carrito.
+- No se implementaron pruebas E2E.
+- Checkout es demostrativo y no procesa pagos reales.

@@ -649,5 +649,5 @@ const candidates = [
   "photo-1602874801006-128f2e6c3a8e",
   "photo-1602874801006-128f2e6c3a8e",
   "photo-1602874801006-128f2e6c3a8e",
-  "photo-1602874801000
+  "photo-1602874801006-128f2e6c3a8e",
 ];

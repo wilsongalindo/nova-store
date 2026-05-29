@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ProductGrid } from "@/features/catalog/product-grid";
@@ -6,6 +7,52 @@ import { getProductBySlug, getRelatedProducts } from "@/lib/products";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
+}
+
+const PRODUCT_NOT_FOUND_METADATA: Metadata = {
+  title: "Product not found",
+  description:
+    "This product may have been removed, is temporarily unavailable, or the link you followed is incorrect.",
+  openGraph: {
+    title: "Product not found",
+    description:
+      "This product may have been removed, is temporarily unavailable, or the link you followed is incorrect.",
+    type: "website",
+  },
+};
+
+export async function generateMetadata({
+  params,
+}: ProductPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
+
+  if (!product) {
+    return PRODUCT_NOT_FOUND_METADATA;
+  }
+
+  const primaryImage = product.images[0];
+
+  return {
+    title: product.name,
+    description: product.description,
+    openGraph: {
+      title: product.name,
+      description: product.description,
+      url: `/products/${product.slug}`,
+      type: "website",
+      ...(primaryImage
+        ? {
+            images: [
+              {
+                url: primaryImage,
+                alt: product.name,
+              },
+            ],
+          }
+        : {}),
+    },
+  };
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {

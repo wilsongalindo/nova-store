@@ -68,10 +68,12 @@ export function FilterBar({
   const priceId = useId();
 
   const [searchInput, setSearchInput] = useState(filters.search);
+  const [prevFiltersSearch, setPrevFiltersSearch] = useState(filters.search);
 
-  useEffect(() => {
+  if (filters.search !== prevFiltersSearch) {
+    setPrevFiltersSearch(filters.search);
     setSearchInput(filters.search);
-  }, [filters.search]);
+  }
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
