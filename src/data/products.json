@@ -1,0 +1,549 @@
+[
+  {
+    "id": "prod-001",
+    "slug": "wireless-earbuds-pro",
+    "name": "Wireless Earbuds Pro",
+    "description": "Premium true wireless earbuds with active noise cancellation, 36-hour total battery life, and IPX5 water resistance. Includes wireless charging case and three sizes of silicone ear tips for a secure, comfortable fit.",
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 149.99,
+    "rating": 4.7,
+    "reviewCount": 1842,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Best Seller",
+    "variants": [
+      { "id": "var-001-midnight", "label": "Midnight Black", "sku": "WEB-PRO-BLK", "price": 149.99, "stock": 48 },
+      { "id": "var-001-silver", "label": "Lunar Silver", "sku": "WEB-PRO-SLV", "price": 149.99, "stock": 32 },
+      { "id": "var-001-sand", "label": "Desert Sand", "sku": "WEB-PRO-SND", "price": 154.99, "stock": 18 }
+    ]
+  },
+  {
+    "id": "prod-002",
+    "slug": "smartwatch-series-x",
+    "name": "Smartwatch Series X",
+    "description": "Advanced fitness smartwatch with always-on AMOLED display, heart rate and SpO2 monitoring, built-in GPS, and 7-day battery life. Syncs seamlessly with iOS and Android for calls, notifications, and workout tracking.",
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 299.99,
+    "rating": 4.5,
+    "reviewCount": 967,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "New",
+    "variants": [
+      { "id": "var-002-42", "label": "42mm — Sport Band", "sku": "SWX-42-SPT", "price": 299.99, "stock": 24 },
+      { "id": "var-002-46", "label": "46mm — Sport Band", "sku": "SWX-46-SPT", "price": 329.99, "stock": 19 },
+      { "id": "var-002-42-lth", "label": "42mm — Leather Band", "sku": "SWX-42-LTH", "price": 349.99, "stock": 11 }
+    ]
+  },
+  {
+    "id": "prod-003",
+    "slug": "4k-monitor-27",
+    "name": "4K Ultra HD Monitor 27\"",
+    "description": "27-inch 4K IPS display with 99% sRGB color accuracy, HDR10 support, and ultra-thin bezels. Ideal for creative professionals, programmers, and gamers who demand crisp visuals and wide viewing angles.",
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1527443224754-53600a3f5fbf?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 449.99,
+    "rating": 4.6,
+    "reviewCount": 534,
+    "inventoryStatus": "low_stock",
+    "promotionBadge": "Sale",
+    "variants": []
+  },
+  {
+    "id": "prod-004",
+    "slug": "mechanical-keyboard-rgb",
+    "name": "Mechanical Keyboard RGB",
+    "description": "Full-size hot-swappable mechanical keyboard with per-key RGB backlighting, double-shot PBT keycaps, and a durable aluminum frame. Features N-key rollover and detachable USB-C cable for clean desk setups.",
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1511467659812-ae64d0565d4e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 129.99,
+    "rating": 4.4,
+    "reviewCount": 721,
+    "inventoryStatus": "low_stock",
+    "variants": [
+      { "id": "var-004-red", "label": "Linear Red Switches", "sku": "MKB-RGB-RED", "price": 129.99, "stock": 7 },
+      { "id": "var-004-brn", "label": "Tactile Brown Switches", "sku": "MKB-RGB-BRN", "price": 129.99, "stock": 5 },
+      { "id": "var-004-blu", "label": "Clicky Blue Switches", "sku": "MKB-RGB-BLU", "price": 134.99, "stock": 4 }
+    ]
+  },
+  {
+    "id": "prod-005",
+    "slug": "portable-bluetooth-speaker",
+    "name": "Portable Bluetooth Speaker",
+    "description": "Compact waterproof speaker delivering 360° sound with deep bass and 20-hour playtime. Pair two units for stereo mode or connect via aux for wired playback at parties, beach trips, and outdoor adventures.",
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1608043159229-423825ba4e80?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 79.99,
+    "rating": 4.3,
+    "reviewCount": 1103,
+    "inventoryStatus": "in_stock",
+    "variants": []
+  },
+  {
+    "id": "prod-006",
+    "slug": "usb-c-hub-7-in-1",
+    "name": "USB-C Hub 7-in-1",
+    "description": "Aluminum multiport adapter with HDMI 4K output, three USB-A 3.0 ports, SD and microSD card readers, and 100W power delivery pass-through. Essential companion for laptops with limited port availability.",
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1625948515291-69613efd202f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 49.99,
+    "rating": 4.1,
+    "reviewCount": 412,
+    "inventoryStatus": "out_of_stock",
+    "promotionBadge": "Sale",
+    "variants": []
+  },
+  {
+    "id": "prod-007",
+    "slug": "classic-denim-jacket",
+    "name": "Classic Denim Jacket",
+    "description": "Timeless medium-wash denim jacket cut from 100% cotton with reinforced stitching and metal button closure. Layer over tees and hoodies for effortless casual style in every season.",
+    "category": "Fashion",
+    "images": [
+      "https://images.unsplash.com/photo-1576995853123-5a10305d93b0?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 89.99,
+    "rating": 4.6,
+    "reviewCount": 658,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Best Seller",
+    "variants": [
+      { "id": "var-007-s", "label": "Size S", "sku": "DNM-JKT-S", "price": 89.99, "stock": 22 },
+      { "id": "var-007-m", "label": "Size M", "sku": "DNM-JKT-M", "price": 89.99, "stock": 35 },
+      { "id": "var-007-l", "label": "Size L", "sku": "DNM-JKT-L", "price": 89.99, "stock": 28 },
+      { "id": "var-007-xl", "label": "Size XL", "sku": "DNM-JKT-XL", "price": 94.99, "stock": 14 }
+    ]
+  },
+  {
+    "id": "prod-008",
+    "slug": "cloud-runner-sneakers",
+    "name": "Cloud Runner Sneakers",
+    "description": "Lightweight performance sneakers with responsive foam cushioning, breathable mesh upper, and durable rubber outsole. Designed for daily training runs and all-day urban comfort.",
+    "category": "Fashion",
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 119.99,
+    "rating": 4.8,
+    "reviewCount": 1435,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "New",
+    "variants": [
+      { "id": "var-008-8", "label": "US 8", "sku": "CLD-RUN-08", "price": 119.99, "stock": 16 },
+      { "id": "var-008-9", "label": "US 9", "sku": "CLD-RUN-09", "price": 119.99, "stock": 21 },
+      { "id": "var-008-10", "label": "US 10", "sku": "CLD-RUN-10", "price": 119.99, "stock": 18 },
+      { "id": "var-008-11", "label": "US 11", "sku": "CLD-RUN-11", "price": 119.99, "stock": 12 }
+    ]
+  },
+  {
+    "id": "prod-009",
+    "slug": "leather-crossbody-bag",
+    "name": "Leather Crossbody Bag",
+    "description": "Handcrafted full-grain leather crossbody with adjustable strap, interior zip pocket, and magnetic snap closure. Fits phone, wallet, and essentials while keeping hands free on commutes and travel days.",
+    "category": "Fashion",
+    "images": [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 159.99,
+    "rating": 4.5,
+    "reviewCount": 389,
+    "inventoryStatus": "low_stock",
+    "variants": [
+      { "id": "var-009-cgn", "label": "Cognac Brown", "sku": "LCB-CGN", "price": 159.99, "stock": 6 },
+      { "id": "var-009-blk", "label": "Onyx Black", "sku": "LCB-BLK", "price": 159.99, "stock": 4 },
+      { "id": "var-009-tan", "label": "Sand Tan", "sku": "LCB-TAN", "price": 164.99, "stock": 3 }
+    ]
+  },
+  {
+    "id": "prod-010",
+    "slug": "organic-cotton-crew-tee",
+    "name": "Organic Cotton Crew Tee",
+    "description": "Soft GOTS-certified organic cotton t-shirt with a relaxed fit and reinforced neckline. Pre-shrunk fabric maintains shape wash after wash — a wardrobe staple available in essential neutrals.",
+    "category": "Fashion",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 34.99,
+    "rating": 4.2,
+    "reviewCount": 892,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Sale",
+    "variants": [
+      { "id": "var-010-s-wht", "label": "S — White", "sku": "OCT-S-WHT", "price": 34.99, "stock": 40 },
+      { "id": "var-010-m-blk", "label": "M — Black", "sku": "OCT-M-BLK", "price": 34.99, "stock": 55 },
+      { "id": "var-010-l-nvy", "label": "L — Navy", "sku": "OCT-L-NVY", "price": 34.99, "stock": 38 },
+      { "id": "var-010-xl-gry", "label": "XL — Heather Gray", "sku": "OCT-XL-GRY", "price": 36.99, "stock": 27 }
+    ]
+  },
+  {
+    "id": "prod-011",
+    "slug": "merino-wool-scarf",
+    "name": "Merino Wool Scarf",
+    "description": "Luxuriously soft merino wool scarf with a lightweight weave that provides warmth without bulk. Finished with fringed edges and available in versatile earth tones for autumn and winter layering.",
+    "category": "Fashion",
+    "images": [
+      "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 54.99,
+    "rating": 4.7,
+    "reviewCount": 203,
+    "inventoryStatus": "low_stock",
+    "variants": []
+  },
+  {
+    "id": "prod-012",
+    "slug": "slim-fit-chinos",
+    "name": "Slim Fit Chinos",
+    "description": "Tailored slim-fit chinos in stretch cotton twill with a flat front and tapered leg. Wrinkle-resistant finish and hidden comfort waistband make them ideal for office wear and smart-casual occasions.",
+    "category": "Fashion",
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b546a28?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 69.99,
+    "rating": 4.0,
+    "reviewCount": 478,
+    "inventoryStatus": "out_of_stock",
+    "promotionBadge": "Sale",
+    "variants": [
+      { "id": "var-012-30", "label": "Waist 30", "sku": "SFC-30", "price": 69.99, "stock": 0 },
+      { "id": "var-012-32", "label": "Waist 32", "sku": "SFC-32", "price": 69.99, "stock": 0 },
+      { "id": "var-012-34", "label": "Waist 34", "sku": "SFC-34", "price": 69.99, "stock": 0 }
+    ]
+  },
+  {
+    "id": "prod-013",
+    "slug": "ceramic-pour-over-set",
+    "name": "Ceramic Pour-Over Coffee Set",
+    "description": "Hand-glazed ceramic dripper and carafe set designed for precision pour-over brewing. Includes a reusable stainless steel filter and heat-resistant handle for café-quality coffee at home.",
+    "category": "Home",
+    "images": [
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1514432324607-09f9aed76d21?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 64.99,
+    "rating": 4.6,
+    "reviewCount": 312,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "New",
+    "variants": []
+  },
+  {
+    "id": "prod-014",
+    "slug": "memory-foam-pillow",
+    "name": "Memory Foam Pillow",
+    "description": "Contoured memory foam pillow with cooling gel layer and removable bamboo-derived cover. Provides ergonomic neck support for side, back, and stomach sleepers seeking better rest and spinal alignment.",
+    "category": "Home",
+    "images": [
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 79.99,
+    "rating": 4.4,
+    "reviewCount": 1247,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Best Seller",
+    "variants": [
+      { "id": "var-014-soft", "label": "Soft — Low Loft", "sku": "MFP-SOFT", "price": 79.99, "stock": 30 },
+      { "id": "var-014-med", "label": "Medium — Standard", "sku": "MFP-MED", "price": 79.99, "stock": 42 },
+      { "id": "var-014-firm", "label": "Firm — High Loft", "sku": "MFP-FIRM", "price": 84.99, "stock": 25 }
+    ]
+  },
+  {
+    "id": "prod-015",
+    "slug": "led-desk-lamp",
+    "name": "LED Desk Lamp",
+    "description": "Adjustable architect-style LED desk lamp with five brightness levels and three color temperatures. Touch controls, USB charging port, and flicker-free illumination reduce eye strain during long work sessions.",
+    "category": "Home",
+    "images": [
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 54.99,
+    "rating": 4.3,
+    "reviewCount": 576,
+    "inventoryStatus": "low_stock",
+    "variants": [
+      { "id": "var-015-wht", "label": "Matte White", "sku": "LDL-WHT", "price": 54.99, "stock": 8 },
+      { "id": "var-015-blk", "label": "Matte Black", "sku": "LDL-BLK", "price": 54.99, "stock": 5 }
+    ]
+  },
+  {
+    "id": "prod-016",
+    "slug": "cotton-sheet-set-queen",
+    "name": "Cotton Sheet Set — Queen",
+    "description": "400-thread-count long-staple cotton sheet set with deep-pocket fitted sheet, flat sheet, and two pillowcases. Breathable sateen weave delivers hotel-quality softness and durability.",
+    "category": "Home",
+    "images": [
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1616627547584-074771652145?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 99.99,
+    "rating": 4.5,
+    "reviewCount": 823,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Sale",
+    "variants": [
+      { "id": "var-016-twn", "label": "Twin", "sku": "CSS-TWN", "price": 79.99, "stock": 20 },
+      { "id": "var-016-qn", "label": "Queen", "sku": "CSS-QN", "price": 99.99, "stock": 33 },
+      { "id": "var-016-kng", "label": "King", "sku": "CSS-KNG", "price": 119.99, "stock": 17 }
+    ]
+  },
+  {
+    "id": "prod-017",
+    "slug": "scented-candle-collection",
+    "name": "Scented Candle Collection",
+    "description": "Set of three hand-poured soy wax candles in glass vessels with cotton wicks and 45-hour burn time each. Fragrances include cedarwood, lavender fields, and vanilla amber for a calming home atmosphere.",
+    "category": "Home",
+    "images": [
+      "https://images.unsplash.com/photo-1602603155262-892031b5a0f7?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 42.99,
+    "rating": 4.8,
+    "reviewCount": 445,
+    "inventoryStatus": "in_stock",
+    "variants": []
+  },
+  {
+    "id": "prod-018",
+    "slug": "vacuum-storage-bags-12-pack",
+    "name": "Vacuum Storage Bags — 12 Pack",
+    "description": "Space-saving vacuum compression bags in assorted sizes for seasonal clothing, bedding, and travel packing. Compatible with any household vacuum cleaner for airtight, moisture-resistant storage.",
+    "category": "Home",
+    "images": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 29.99,
+    "rating": 3.9,
+    "reviewCount": 156,
+    "inventoryStatus": "out_of_stock",
+    "variants": []
+  },
+  {
+    "id": "prod-019",
+    "slug": "yoga-mat-premium",
+    "name": "Yoga Mat Premium",
+    "description": "Extra-thick 6mm eco-friendly TPE yoga mat with non-slip texture on both sides and alignment markers. Includes carrying strap and is free from latex, PVC, and harmful phthalates.",
+    "category": "Sports",
+    "images": [
+      "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 59.99,
+    "rating": 4.7,
+    "reviewCount": 2104,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Best Seller",
+    "variants": [
+      { "id": "var-019-sge", "label": "Sage Green", "sku": "YMP-SGE", "price": 59.99, "stock": 44 },
+      { "id": "var-019-ocn", "label": "Ocean Blue", "sku": "YMP-OCN", "price": 59.99, "stock": 36 },
+      { "id": "var-019-crl", "label": "Coral", "sku": "YMP-CRL", "price": 59.99, "stock": 29 }
+    ]
+  },
+  {
+    "id": "prod-020",
+    "slug": "adjustable-dumbbell-set",
+    "name": "Adjustable Dumbbell Set",
+    "description": "Pair of adjustable dumbbells ranging from 5 to 52.5 lbs with quick-dial weight selection. Replaces 15 sets of traditional dumbbells — perfect for compact home gym setups.",
+    "category": "Sports",
+    "images": [
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 349.99,
+    "rating": 4.6,
+    "reviewCount": 687,
+    "inventoryStatus": "low_stock",
+    "promotionBadge": "Sale",
+    "variants": []
+  },
+  {
+    "id": "prod-021",
+    "slug": "hydration-backpack-2l",
+    "name": "Hydration Backpack 2L",
+    "description": "Lightweight running and hiking backpack with integrated 2-liter hydration bladder, chest and hip straps, and multiple zip pockets. Breathable mesh back panel keeps you cool on long trail runs.",
+    "category": "Sports",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 74.99,
+    "rating": 4.4,
+    "reviewCount": 521,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "New",
+    "variants": [
+      { "id": "var-021-blk", "label": "Black", "sku": "HYB-BLK", "price": 74.99, "stock": 26 },
+      { "id": "var-021-red", "label": "Trail Red", "sku": "HYB-RED", "price": 74.99, "stock": 15 }
+    ]
+  },
+  {
+    "id": "prod-022",
+    "slug": "resistance-bands-set",
+    "name": "Resistance Bands Set",
+    "description": "Five-level resistance band set with door anchor, ankle straps, and carrying pouch. Ideal for strength training, physical therapy, and travel workouts with color-coded tension levels from light to extra heavy.",
+    "category": "Sports",
+    "images": [
+      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 24.99,
+    "rating": 4.2,
+    "reviewCount": 1634,
+    "inventoryStatus": "in_stock",
+    "variants": []
+  },
+  {
+    "id": "prod-023",
+    "slug": "tennis-racket-pro",
+    "name": "Tennis Racket Pro",
+    "description": "Graphite composite tennis racket with oversized head for improved sweet spot, vibration-dampening grommets, and pre-strung premium nylon. Suitable for intermediate to advanced players seeking power and control.",
+    "category": "Sports",
+    "images": [
+      "https://images.unsplash.com/photo-1617083277629-36a4c5a2aa4b?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 189.99,
+    "rating": 4.5,
+    "reviewCount": 278,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Sale",
+    "variants": [
+      { "id": "var-023-4", "label": "Grip Size 4", "sku": "TRP-G4", "price": 189.99, "stock": 10 },
+      { "id": "var-023-3", "label": "Grip Size 3", "sku": "TRP-G3", "price": 189.99, "stock": 8 }
+    ]
+  },
+  {
+    "id": "prod-024",
+    "slug": "high-density-foam-roller",
+    "name": "High-Density Foam Roller",
+    "description": "18-inch high-density EVA foam roller for myofascial release, post-workout recovery, and mobility exercises. Textured surface targets deep muscle tissue to reduce soreness and improve flexibility.",
+    "category": "Sports",
+    "images": [
+      "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 32.99,
+    "rating": 4.1,
+    "reviewCount": 945,
+    "inventoryStatus": "out_of_stock",
+    "variants": []
+  },
+  {
+    "id": "prod-025",
+    "slug": "vitamin-c-brightening-serum",
+    "name": "Vitamin C Brightening Serum",
+    "description": "15% stabilized vitamin C serum with hyaluronic acid and vitamin E to brighten dull skin, fade dark spots, and boost hydration. Lightweight, fast-absorbing formula suitable for daily morning use.",
+    "category": "Beauty",
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 38.99,
+    "rating": 4.7,
+    "reviewCount": 2847,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Best Seller",
+    "variants": []
+  },
+  {
+    "id": "prod-026",
+    "slug": "matte-lipstick-set",
+    "name": "Matte Lipstick Set",
+    "description": "Collection of six long-wear matte lipsticks enriched with shea butter and jojoba oil. Highly pigmented shades from nude to berry with a comfortable, non-drying finish that lasts up to 8 hours.",
+    "category": "Beauty",
+    "images": [
+      "https://images.unsplash.com/photo-1586495777744-4413f210fa4f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 48.99,
+    "rating": 4.5,
+    "reviewCount": 712,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "New",
+    "variants": [
+      { "id": "var-026-warm", "label": "Warm Tones Set", "sku": "MLS-WARM", "price": 48.99, "stock": 31 },
+      { "id": "var-026-cool", "label": "Cool Tones Set", "sku": "MLS-COOL", "price": 48.99, "stock": 27 },
+      { "id": "var-026-nud", "label": "Nude Essentials Set", "sku": "MLS-NUD", "price": 52.99, "stock": 19 }
+    ]
+  },
+  {
+    "id": "prod-027",
+    "slug": "hydrating-face-moisturizer",
+    "name": "Hydrating Face Moisturizer",
+    "description": "Oil-free daily moisturizer with ceramides, niacinamide, and squalane to strengthen the skin barrier and lock in moisture for 24 hours. Non-comedogenic and fragrance-free for sensitive skin types.",
+    "category": "Beauty",
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 28.99,
+    "rating": 4.3,
+    "reviewCount": 1098,
+    "inventoryStatus": "low_stock",
+    "variants": []
+  },
+  {
+    "id": "prod-028",
+    "slug": "argan-oil-hair-treatment",
+    "name": "Argan Oil Hair Treatment",
+    "description": "Cold-pressed Moroccan argan oil treatment that tames frizz, adds shine, and protects hair from heat damage. Suitable for all hair types — apply to damp or dry hair from mid-lengths to ends.",
+    "category": "Beauty",
+    "images": [
+      "https://images.unsplash.com/photo-1608248543801-ba977795e702?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 22.99,
+    "rating": 4.6,
+    "reviewCount": 1567,
+    "inventoryStatus": "in_stock",
+    "promotionBadge": "Sale",
+    "variants": []
+  },
+  {
+    "id": "prod-029",
+    "slug": "nude-eyeshadow-palette",
+    "name": "Nude Eyeshadow Palette",
+    "description": "Twelve-shade eyeshadow palette featuring matte, shimmer, and satin finishes in wearable nude and bronze tones. Blendable, crease-resistant formula with a dual-ended brush included.",
+    "category": "Beauty",
+    "images": [
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 36.99,
+    "rating": 4.4,
+    "reviewCount": 634,
+    "inventoryStatus": "in_stock",
+    "variants": [
+      { "id": "var-029-wrm", "label": "Warm Nudes", "sku": "NEP-WRM", "price": 36.99, "stock": 23 },
+      { "id": "var-029-cld", "label": "Cool Nudes", "sku": "NEP-CLD", "price": 36.99, "stock": 18 }
+    ]
+  },
+  {
+    "id": "prod-030",
+    "slug": "spf-50-mineral-sunscreen",
+    "name": "SPF 50 Mineral Sunscreen",
+    "description": "Broad-spectrum SPF 50 mineral sunscreen with zinc oxide and antioxidants to protect against UVA/UVB rays. Lightweight, reef-safe formula leaves no white cast and works under makeup.",
+    "category": "Beauty",
+    "images": [
+      "https://images.unsplash.com/photo-1556228578-0d85b4a4d571?auto=format&fit=crop&w=800&q=80"
+    ],
+    "price": 26.99,
+    "rating": 4.8,
+    "reviewCount": 1923,
+    "inventoryStatus": "out_of_stock",
+    "promotionBadge": "Sale",
+    "variants": [
+      { "id": "var-030-50", "label": "50ml Travel Size", "sku": "SPF-50ML", "price": 26.99, "stock": 0 },
+      { "id": "var-030-100", "label": "100ml Standard", "sku": "SPF-100ML", "price": 39.99, "stock": 0 }
+    ]
+  }
+]

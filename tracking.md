@@ -5,8 +5,8 @@
 | Área             | Estado |
 | ---------------- | ------ |
 | Arquitectura     | ⬜      |
-| Tipos            | ⬜      |
-| Dataset          | ⬜      |
+| Tipos            | ✅      |
+| Dataset          | ✅      |
 | Catálogo         | ⬜      |
 | Filtros          | ⬜      |
 | Detalle Producto | ⬜      |
