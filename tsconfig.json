@@ -23,6 +23,7 @@
       "@/types/*": ["./src/types/*"],
       "@/data/*": ["./src/data/*"],
       "@/lib/products": ["./src/lib/products.ts"],
+      "@/features/*": ["./src/features/*", "./features/*"],
       "@/*": ["./*"]
     }
   },
