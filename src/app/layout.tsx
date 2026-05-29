@@ -15,9 +15,40 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  title: "Nova Store",
-  description: "Nova Store ecommerce",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Nova Store | Modern Shopping",
+    template: "%s | Nova Store",
+  },
+  description:
+    "Shop curated products across electronics, fashion, home, sports, and beauty at Nova Store. Fast browsing, smart filters, and a seamless cart experience.",
+  keywords: [
+    "Nova Store",
+    "online shopping",
+    "ecommerce",
+    "electronics",
+    "fashion",
+    "home",
+    "sports",
+    "beauty",
+    "curated products",
+  ],
+  openGraph: {
+    title: "Nova Store | Modern Shopping",
+    description:
+      "Discover curated products across electronics, fashion, home, sports, and beauty.",
+    url: "/",
+    siteName: "Nova Store",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
