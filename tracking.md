@@ -40,11 +40,11 @@
 
 | Requisito         | Estado |
 | ----------------- | ------ |
-| Búsqueda texto    | ⬜      |
-| Categoría         | ⬜      |
-| Ordenamiento      | ⬜      |
-| Rango precio      | ⬜      |
-| Estado inventario | ⬜      |
+| Búsqueda texto    | ✅      |
+| Categoría         | ✅      |
+| Ordenamiento      | ✅      |
+| Rango precio      | ✅      |
+| Estado inventario | ✅      |
 
 ---
 
