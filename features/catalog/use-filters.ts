@@ -4,11 +4,11 @@ import type { FilterState } from "@/types";
 
 export function useFilters(): FilterState {
   return {
-    q: "",
+    search: "",
     category: null,
     minPrice: 0,
     maxPrice: 0,
-    inStockOnly: false,
-    sort: "name",
+    inventoryStatus: null,
+    sort: "newest",
   };
 }
