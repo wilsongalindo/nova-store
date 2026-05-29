@@ -13,8 +13,12 @@ export default defineConfig({
         replacement: path.resolve(__dirname, "./src/types/index.ts"),
       },
       {
-        find: /^@\/features\/(.+)$/,
-        replacement: `${path.resolve(__dirname, "./src/features")}/$1`,
+        find: "@/lib/format-price",
+        replacement: path.resolve(__dirname, "./src/lib/format-price.ts"),
+      },
+      {
+        find: "@/lib/products",
+        replacement: path.resolve(__dirname, "./src/lib/products.ts"),
       },
       {
         find: "@",

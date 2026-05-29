@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
+import { formatPrice } from "@/lib/format-price";
 import { cn } from "@/lib/utils";
 import type { InventoryStatus, Product, ProductVariant } from "@/types";
 
@@ -42,13 +43,6 @@ const INVENTORY_STYLES: Record<InventoryStatus, string> = {
   out_of_stock:
     "border-red-200 bg-red-50 text-red-800 dark:border-red-800/50 dark:bg-red-950/40 dark:text-red-300",
 };
-
-function formatPrice(price: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(price);
-}
 
 function getPromotionBadgeVariant(
   badge: string,

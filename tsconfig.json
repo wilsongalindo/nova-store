@@ -23,6 +23,7 @@
       "@/types/*": ["./src/types/*"],
       "@/data/*": ["./src/data/*"],
       "@/lib/products": ["./src/lib/products.ts"],
+      "@/lib/format-price": ["./src/lib/format-price.ts"],
       "@/features/*": ["./src/features/*", "./features/*"],
       "@/*": ["./*"]
     }
