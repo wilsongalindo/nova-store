@@ -27,6 +27,25 @@ export interface CartActions {
 
 export type CartStore = CartState & CartActions;
 
+/** Payload shared by catalog cards and PDP add-to-cart actions. */
+export interface AddToCartPayload {
+  product: Product;
+  variant: ProductVariant | null;
+  price: number;
+}
+
+/** Builds a typed add-to-cart payload from catalog data. */
+export function buildAddToCartPayload(
+  product: Product,
+  variant: ProductVariant | null = null,
+): AddToCartPayload {
+  return {
+    product,
+    variant,
+    price: variant?.price ?? product.price,
+  };
+}
+
 type VariantId = ProductVariant["id"] | null;
 
 /** Builds a stable key for a cart line (product + variant). */

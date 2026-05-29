@@ -13,6 +13,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  buildAddToCartPayload,
+  useCartStore,
+  type AddToCartPayload,
+} from "@/features/cart/cart-store";
 import { formatPrice } from "@/lib/format-price";
 import { cn } from "@/lib/utils";
 import type { InventoryStatus, Product } from "@/types";
@@ -20,8 +25,7 @@ import type { InventoryStatus, Product } from "@/types";
 export interface ProductCardProps {
   product: Product;
   className?: string;
-  /** Optional handler wired when cart logic is implemented. */
-  onAddToCart?: (product: Product) => void;
+  onAddToCart?: (payload: AddToCartPayload) => void;
 }
 
 const INVENTORY_LABELS: Record<InventoryStatus, string> = {
@@ -99,8 +103,20 @@ export function ProductCard({
   className,
   onAddToCart,
 }: ProductCardProps) {
+  const addItem = useCartStore((state) => state.addItem);
   const isOutOfStock = product.inventoryStatus === "out_of_stock";
   const primaryImage = product.images[0];
+
+  const handleAddToCart = () => {
+    const payload = buildAddToCartPayload(product);
+
+    if (onAddToCart) {
+      onAddToCart(payload);
+      return;
+    }
+
+    addItem(payload.product, payload.variant, 1);
+  };
 
   return (
     <Card
@@ -192,7 +208,7 @@ export function ProductCard({
               ? `${product.name} is out of stock`
               : `Add ${product.name} to cart`
           }
-          onClick={() => onAddToCart?.(product)}
+          onClick={handleAddToCart}
         >
           <ShoppingCart aria-hidden="true" />
           Add To Cart

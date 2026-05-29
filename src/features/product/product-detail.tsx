@@ -16,13 +16,12 @@ import { formatPrice } from "@/lib/format-price";
 import { cn } from "@/lib/utils";
 import type { InventoryStatus, Product, ProductVariant } from "@/types";
 
-import { AddToCartButton, type AddToCartPayload } from "./add-to-cart-button";
+import { AddToCartButton } from "./add-to-cart-button";
 import { ProductGallery } from "./product-gallery";
 
 export interface ProductDetailProps {
   product: Product;
   className?: string;
-  onAddToCart?: (payload: AddToCartPayload) => void;
 }
 
 const INVENTORY_LABELS: Record<InventoryStatus, string> = {
@@ -108,11 +107,7 @@ function resolveInitialVariant(product: Product): ProductVariant | null {
   return availableVariant ?? product.variants[0];
 }
 
-export function ProductDetail({
-  product,
-  className,
-  onAddToCart,
-}: ProductDetailProps) {
+export function ProductDetail({ product, className }: ProductDetailProps) {
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
     () => resolveInitialVariant(product),
   );
@@ -223,7 +218,6 @@ export function ProductDetail({
             price={displayPrice}
             disabled={isAddToCartDisabled}
             className="w-full sm:w-auto"
-            onAddToCart={onAddToCart}
           />
         </div>
       </div>

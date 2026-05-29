@@ -3,14 +3,15 @@
 import { ShoppingCart } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  buildAddToCartPayload,
+  useCartStore,
+  type AddToCartPayload,
+} from "@/features/cart/cart-store";
 import { formatPrice } from "@/lib/format-price";
 import type { Product, ProductVariant } from "@/types";
 
-export interface AddToCartPayload {
-  product: Product;
-  variant: ProductVariant | null;
-  price: number;
-}
+export type { AddToCartPayload };
 
 export interface AddToCartButtonProps {
   product: Product;
@@ -29,7 +30,19 @@ export function AddToCartButton({
   className,
   onAddToCart,
 }: AddToCartButtonProps) {
+  const addItem = useCartStore((state) => state.addItem);
   const isDisabled = disabled || product.inventoryStatus === "out_of_stock";
+
+  const handleClick = () => {
+    const payload = buildAddToCartPayload(product, variant);
+
+    if (onAddToCart) {
+      onAddToCart(payload);
+      return;
+    }
+
+    addItem(payload.product, payload.variant, 1);
+  };
 
   return (
     <Button
@@ -42,13 +55,7 @@ export function AddToCartButton({
           ? `${product.name} is out of stock`
           : `Add ${product.name} to cart for ${formatPrice(price)}`
       }
-      onClick={() =>
-        onAddToCart?.({
-          product,
-          variant,
-          price,
-        })
-      }
+      onClick={handleClick}
     >
       <ShoppingCart aria-hidden="true" />
       Add To Cart
