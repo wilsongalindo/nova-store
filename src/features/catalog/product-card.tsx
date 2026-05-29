@@ -129,7 +129,7 @@ export function ProductCard({
               src={primaryImage}
               alt={product.name}
               fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           ) : (
@@ -187,7 +187,6 @@ export function ProductCard({
           type="button"
           className="w-full"
           disabled={isOutOfStock}
-          aria-disabled={isOutOfStock}
           aria-label={
             isOutOfStock
               ? `${product.name} is out of stock`

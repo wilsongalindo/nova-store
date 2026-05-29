@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { PackageOpen } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -26,9 +27,11 @@ function ProductGridEmptyState({
   title,
   description,
 }: Required<ProductGridEmptyStateProps>) {
+  const titleId = useId();
+
   return (
     <section
-      aria-labelledby="product-grid-empty-title"
+      aria-labelledby={titleId}
       className="flex flex-col items-center justify-center rounded-xl border border-dashed bg-muted/30 px-6 py-16 text-center"
     >
       <div
@@ -38,7 +41,7 @@ function ProductGridEmptyState({
         <PackageOpen className="size-7 text-muted-foreground" />
       </div>
       <h2
-        id="product-grid-empty-title"
+        id={titleId}
         className="text-lg font-semibold tracking-tight"
       >
         {title}
@@ -70,7 +73,6 @@ export function ProductGrid({
 
   return (
     <ul
-      role="list"
       aria-label={`${products.length} products`}
       className={cn(
         "grid w-full list-none grid-cols-1 gap-6 p-0 m-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",

@@ -1,7 +1,6 @@
 import { create } from "zustand";
 
-import type { CartItem } from "@/types";
-import type { Product, ProductVariant } from "@/types";
+import type { CartItem, Product, ProductVariant } from "@/types";
 
 /** Cart state slice — persist-ready (actions live outside this shape). */
 export interface CartState {
@@ -72,6 +71,14 @@ function resolveDisplayName(
   return `${product.name} — ${variant.label}`;
 }
 
+function normalizeQuantity(quantity: number): number {
+  if (!Number.isFinite(quantity)) {
+    return 1;
+  }
+
+  return Math.max(1, Math.floor(quantity));
+}
+
 /** Creates a snapshot {@link CartItem} from catalog data. */
 export function createCartItem(
   product: Product,
@@ -84,7 +91,7 @@ export function createCartItem(
     name: resolveDisplayName(product, variant),
     image: product.images[0] ?? "",
     price: resolveUnitPrice(product, variant),
-    quantity: Math.max(1, quantity),
+    quantity: normalizeQuantity(quantity),
   };
 }
 
@@ -108,7 +115,7 @@ export function addItemToCart(
   quantity = 1,
 ): CartItem[] {
   const normalizedVariantId = normalizeVariantId(variant?.id ?? null);
-  const safeQuantity = Math.max(1, quantity);
+  const safeQuantity = normalizeQuantity(quantity);
   const existingIndex = findItemIndex(items, product.id, normalizedVariantId);
 
   if (existingIndex === -1) {
@@ -149,10 +156,11 @@ export function updateCartItemQuantity(
   quantity: number,
   variantId?: ProductVariant["id"] | null,
 ): CartItem[] {
-  if (quantity <= 0) {
+  if (!Number.isFinite(quantity) || quantity <= 0) {
     return removeItemFromCart(items, productId, variantId);
   }
 
+  const safeQuantity = Math.floor(quantity);
   const normalizedVariantId = normalizeVariantId(variantId);
   const existingIndex = findItemIndex(items, productId, normalizedVariantId);
 
@@ -161,7 +169,7 @@ export function updateCartItemQuantity(
   }
 
   return items.map((item, index) =>
-    index === existingIndex ? { ...item, quantity } : item,
+    index === existingIndex ? { ...item, quantity: safeQuantity } : item,
   );
 }
 

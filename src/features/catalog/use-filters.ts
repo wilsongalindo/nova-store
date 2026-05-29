@@ -7,7 +7,6 @@ import type { FilterState } from "@/types";
 
 import {
   countActiveFilters,
-  getDefaultFilters,
   mergeFilters,
   parseFilterParams,
   serializeFilterParams,
@@ -50,6 +49,5 @@ export function useFilters(priceBounds: PriceBounds) {
     setFilter,
     resetFilters,
     activeFilterCount,
-    defaultFilters: getDefaultFilters(priceBounds),
   };
 }

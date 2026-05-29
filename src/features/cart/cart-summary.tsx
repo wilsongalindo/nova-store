@@ -46,7 +46,6 @@ export function CartSummary({ className, onCheckout }: CartSummaryProps) {
         size="lg"
         className="w-full"
         disabled={isEmpty}
-        aria-disabled={isEmpty}
         aria-label={
           isEmpty
             ? "Checkout unavailable, cart is empty"

@@ -94,6 +94,32 @@ describe("pure cart operations", () => {
     expect(result).toHaveLength(0);
   });
 
+  it("removes item when quantity is not finite", () => {
+    const items = addItemToCart([], mockProduct, null, 2);
+    const result = updateCartItemQuantity(items, mockProduct.id, NaN, null);
+
+    expect(result).toHaveLength(0);
+  });
+
+  it("floors fractional quantities on update", () => {
+    const items = addItemToCart([], mockProduct, null, 1);
+    const result = updateCartItemQuantity(items, mockProduct.id, 2.9, null);
+
+    expect(result[0].quantity).toBe(2);
+  });
+
+  it("ignores update for a line that does not exist", () => {
+    const items = addItemToCart([], mockProduct, null, 1);
+    const result = updateCartItemQuantity(items, "unknown-id", 5, null);
+
+    expect(result).toEqual(items);
+  });
+
+  it("returns zero subtotal and item count for an empty cart", () => {
+    expect(calculateItemCount([])).toBe(0);
+    expect(calculateSubtotal([])).toBe(0);
+  });
+
   it("does not mutate the input array", () => {
     const items = addItemToCart([], mockProduct, null, 1);
     const snapshot = [...items];

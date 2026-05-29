@@ -39,13 +39,22 @@ export function CatalogView({
         onFilterChange={setFilter}
         onReset={resetFilters}
       />
-      <ProductGrid
-        products={filteredProducts}
-        emptyState={{
-          title: "No products found",
-          description: "Try adjusting your filters or search terms.",
-        }}
-      />
+      <section aria-labelledby="catalog-results-heading">
+        <h2 id="catalog-results-heading" className="sr-only">
+          Product results
+        </h2>
+        <p className="sr-only" aria-live="polite" aria-atomic="true">
+          {filteredProducts.length}{" "}
+          {filteredProducts.length === 1 ? "product" : "products"} found
+        </p>
+        <ProductGrid
+          products={filteredProducts}
+          emptyState={{
+            title: "No products found",
+            description: "Try adjusting your filters or search terms.",
+          }}
+        />
+      </section>
     </>
   );
 }

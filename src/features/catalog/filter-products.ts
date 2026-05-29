@@ -1,5 +1,4 @@
-import type { Product } from "@/types";
-import type { FilterState, SortOption } from "@/types";
+import type { FilterState, Product, SortOption } from "@/types";
 
 /**
  * Returns whether a product matches the search query (name or description).

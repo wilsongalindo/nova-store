@@ -3,6 +3,7 @@
 import { ShoppingCart } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { formatPrice } from "@/lib/format-price";
 import type { Product, ProductVariant } from "@/types";
 
 export interface AddToCartPayload {
@@ -36,11 +37,10 @@ export function AddToCartButton({
       size="lg"
       className={className}
       disabled={isDisabled}
-      aria-disabled={isDisabled}
       aria-label={
         isDisabled
           ? `${product.name} is out of stock`
-          : `Add ${product.name} to cart for ${price.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
+          : `Add ${product.name} to cart for ${formatPrice(price)}`
       }
       onClick={() =>
         onAddToCart?.({

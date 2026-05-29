@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
 
@@ -14,14 +14,6 @@ export interface HeaderProps {
 
 export function Header({ className }: HeaderProps) {
   const [cartOpen, setCartOpen] = useState(false);
-
-  const handleOpenCart = useCallback(() => {
-    setCartOpen(true);
-  }, []);
-
-  const handleCartOpenChange = useCallback((open: boolean) => {
-    setCartOpen(open);
-  }, []);
 
   return (
     <header
@@ -53,11 +45,11 @@ export function Header({ className }: HeaderProps) {
         </Link>
 
         <nav aria-label="Site actions" className="flex shrink-0 items-center">
-          <CartTrigger onClick={handleOpenCart} />
+          <CartTrigger onClick={() => setCartOpen(true)} />
         </nav>
       </div>
 
-      <CartSheet open={cartOpen} onOpenChange={handleCartOpenChange} />
+      <CartSheet open={cartOpen} onOpenChange={setCartOpen} />
     </header>
   );
 }

@@ -76,14 +76,13 @@ export function ProductGallery({
       {images.length > 1 ? (
         <ul
           className="flex list-none gap-3 overflow-x-auto p-0 m-0"
-          role="list"
           aria-label={`${productName} image thumbnails`}
         >
           {images.map((image, index) => {
             const isSelected = index === safeIndex;
 
             return (
-              <li key={image} className="shrink-0">
+              <li key={`${image}-${index}`} className="shrink-0">
                 <button
                   type="button"
                   onClick={() => setSelectedIndex(index)}

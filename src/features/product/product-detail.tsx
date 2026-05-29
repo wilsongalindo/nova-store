@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useId, useState } from "react";
 import { Star } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -16,17 +16,13 @@ import { formatPrice } from "@/lib/format-price";
 import { cn } from "@/lib/utils";
 import type { InventoryStatus, Product, ProductVariant } from "@/types";
 
-import { AddToCartButton } from "./add-to-cart-button";
+import { AddToCartButton, type AddToCartPayload } from "./add-to-cart-button";
 import { ProductGallery } from "./product-gallery";
 
 export interface ProductDetailProps {
   product: Product;
   className?: string;
-  onAddToCart?: (payload: {
-    product: Product;
-    variant: ProductVariant | null;
-    price: number;
-  }) => void;
+  onAddToCart?: (payload: AddToCartPayload) => void;
 }
 
 const INVENTORY_LABELS: Record<InventoryStatus, string> = {
@@ -92,7 +88,10 @@ function ProductRating({ rating, reviewCount }: ProductRatingProps) {
           );
         })}
       </div>
-      <span className="text-sm text-muted-foreground tabular-nums">
+      <span
+        className="text-sm text-muted-foreground tabular-nums"
+        aria-hidden="true"
+      >
         {rating.toFixed(1)} ({reviewCount.toLocaleString()} reviews)
       </span>
     </div>
@@ -123,10 +122,7 @@ export function ProductDetail({
   const isAddToCartDisabled =
     product.inventoryStatus === "out_of_stock" || variantOutOfStock;
 
-  const variantSelectId = useMemo(
-    () => `variant-select-${product.id}`,
-    [product.id],
-  );
+  const variantSelectId = useId();
 
   return (
     <article

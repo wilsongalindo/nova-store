@@ -104,16 +104,16 @@ export function CartItemRow({ item, className }: CartItemRowProps) {
               type="button"
               variant="outline"
               size="icon-sm"
-              aria-label={`Decrease quantity of ${productName}`}
+              aria-label={
+                item.quantity === 1
+                  ? `Remove ${productName} from cart`
+                  : `Decrease quantity of ${productName}`
+              }
               onClick={handleDecrement}
             >
               <Minus aria-hidden="true" />
             </Button>
-            <span
-              className="min-w-8 text-center text-sm font-medium tabular-nums"
-              aria-live="polite"
-              aria-atomic="true"
-            >
+            <span className="min-w-8 text-center text-sm font-medium tabular-nums">
               {item.quantity}
             </span>
             <Button

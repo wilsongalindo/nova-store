@@ -99,7 +99,8 @@ export function FilterBar({
             variant="ghost"
             size="sm"
             onClick={onReset}
-            className="text-muted-foreground"
+            className="shrink-0 text-muted-foreground"
+            aria-label={`Clear all filters (${activeFilterCount} active)`}
           >
             <RotateCcw aria-hidden="true" />
             Clear filters ({activeFilterCount})
@@ -119,8 +120,10 @@ export function FilterBar({
             />
             <Input
               id={searchId}
+              name="q"
               type="search"
               placeholder="Search products..."
+              autoComplete="off"
               value={searchInput}
               onChange={(event) => setSearchInput(event.target.value)}
               className="pl-9"

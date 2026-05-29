@@ -72,7 +72,6 @@ export function CartSheet({ open, onOpenChange }: CartSheetProps) {
             <CartEmptyState />
           ) : (
             <ul
-              role="list"
               aria-label="Cart items"
               className="flex list-none flex-col gap-4 p-0 m-0"
             >
